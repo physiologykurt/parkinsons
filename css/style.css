@@ -1,0 +1,54 @@
+body {
+    font-family: 'Sanchez', serif;
+
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+
+    padding: 25px 0;
+}
+
+nav {
+    text-align: center;
+    -webkit-align-self: center;
+            align-self: center;
+}
+
+nav ul {
+    list-style-type: none;
+
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: stretch;
+            align-items: stretch;
+    -webkit-flex: 3 1 auto;
+            flex: 3 1 auto;
+}
+
+nav button {
+    padding: 0.2cm;
+    background-color: #111;
+    margin: 0.1cm;
+    border:none;
+
+    color: #fff;
+    -webkit-transition: padding 0.5s;
+}
+
+nav button:hover {
+    padding: 0.2cm 0.9cm 0.2cm 0.9cm;
+    -webkit-transition: padding 0.5s;
+}
+
+section {
+    padding: 1cm;
+}
+
+footer {
+    font-size: 8pt;
+
+    padding: 0.2cm 0.9cm 0.2cm 0.9cm;
+    background-color: #000;
+    color: #fff;
+}

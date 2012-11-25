@@ -1,437 +1,79 @@
-<html lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>CSS3 Flexible Box Model Tutorial</title>
-    <meta name="description" content="">
-    <meta name="author" content="Richard Shepherd for Smashing Magazine">
-    <!--[if lte IE 8]>
-    <script src="js/flexie.js"></script><![endif]-->
+	<meta charset="utf-8">
+	<title>Parkinson's Disease</title>
 
-    <link rel="stylesheet" href="css/reset.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/flickrbomb.css">
-    <link href='http://fonts.googleapis.com/css?family=Brawler' rel='stylesheet' type='text/css'>
+	<meta name="description" content="Class Project Website">
+	<meta name="author" content="Gary Ge, Kurt Ostfeld, Sonny Tran">
 
+	<link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
 
-<div id="links">
-    &laquo; <a href="http://www.smashing-magazine.com/" target="_blank">Back to Smashing Magazine</a> : <span
-        id="follow"></span> : <a href="http://www.richardshepherd.com" target="_blank">RichardShepherd.com</a> &raquo;
-</div>
-
 <header class="box bHorizontal">
-    <hgroup>
-        <h1>The Fruit Blog</h1>
-
-        <h2>Everything you wanted to know about fruit</h2>
-    </hgroup>
-
-    <form id="search">
-        <fieldset>
-            <label for="searchterm">Search</label>
-            <input type="search" placeholder="What's your favourite fruit…" name="searchterm"/>
-            <button type="submit">Search!</button>
-        </fieldset>
-    </form>
-
+	<hgroup>
+		<h1>Parkinson's Disease</h1>
+	</hgroup>
 </header>
 
 <nav>
-    <ul>
-        <li><a href="">First Link</a></li>
-        <li><a href="">Second Link</a></li>
-        <li><a href="">Third Link</a></li>
-        <li><a href="">Fourth Link</a></li>
-        <li><a href="">Fifth Link</a></li>
-        <li><a href="">Sixth Link</a></li>
-    </ul>
+	<ul>
+		<li><button onclick="navigate('physiology');">Physiology</button></li>
+		<li><button onclick="navigate('pathophysiology');">Pathophysiology</button></li>
+		<li><button onclick="navigate('relevance');">Clinical Relevance</button></li>
+		<li><button onclick="navigate('developments');">Recent Developments</button></li>
+		<li><button onclick="navigate('references');">References</button></li>
+	</ul>
 </nav>
 
+<section id="navigatable">
+	<div id="physiology" style="display: block;">
+		Physiology Section<br/>
+		<br/>
 
-<div id="container">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit tortor vel lacus lacinia commodo. Suspendisse sed risus lacus. Sed condimentum dictum leo a cursus. Aenean consequat odio ut nisi adipiscing aliquam. Etiam et nunc ut justo ultricies sagittis viverra eu dolor. Fusce mattis lacus nec nulla sodales eu condimentum leo euismod. Integer est mauris, posuere nec blandit eget, blandit a nulla. In iaculis consequat nisl. Fusce aliquam tincidunt laoreet. Nam a ullamcorper dui. Pellentesque vitae tellus dolor, vel lacinia orci. Morbi egestas placerat sem. Suspendisse accumsan ipsum in velit fringilla tincidunt. Curabitur vitae erat nec elit dapibus molestie nec eu dui. Mauris non vestibulum nisi.
+	</div>
+	<div id="pathophysiology" style="display: none;">
+		pathophysiology Section<br/>
+		<br/>
 
-<div id="main" role="main">
+		Nulla facilisi. Proin interdum quam semper nibh euismod sit amet fermentum elit rutrum. Quisque lacinia, tellus et dapibus hendrerit, massa eros consectetur massa, vitae sagittis nulla lectus ultricies erat. Sed interdum, erat sed consectetur sollicitudin, erat neque cursus mi, ut cursus dui urna vitae tortor. Pellentesque iaculis viverra tortor sed facilisis. Phasellus malesuada adipiscing egestas. In in quam urna. Aenean feugiat elit vel urna placerat eu luctus eros sodales.
+	</div>
+	<div id="relevance" style="display: none;">
+		Relevance Section<br/>
+		<br/>
 
-    <figure>
-        <img src="flickr://Fruit" id="main-image"/>
-        <figcaption>How tasty does <b>this</b> look!</figcaption>
-    </figure>
+		Vestibulum imperdiet scelerisque ligula in gravida. Nam elementum nisl id urna eleifend vel eleifend elit facilisis. Praesent id lectus quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat lectus nec odio cursus at interdum elit eleifend. Vivamus id ultrices arcu. Nullam dapibus nisi nec lectus aliquam lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer odio sapien, suscipit id hendrerit sed, varius eu diam. Nunc eget nulla urna, suscipit facilisis nisi.
+	</div>
+	<div id="developments" style="display: none;">
+		Developments
+	</div>
+	<div id="references" style="display: none;">
+		<h2>References</h2>
 
-    <hr/>
-
-    <div class="box">
-        <aside class="bFlex2">
-            <figure>
-                <img src="flickr://Bananas"/>
-                <figcaption>Bananas</figcaption>
-            </figure>
-            <p>In broad terms, a fruit is a structure of a plant that contains its seeds. The term has different
-                meanings dependent on context. In non-technical usage, such as food preparation, fruit normally means
-                the fleshy seed-associated structures of certain plants that are sweet and edible in the raw state, such
-                as apples, oranges, grapes, strawberries, juniper berries and bananas.</p>
-        </aside>
-
-        <aside class="bFlex1">
-            <figure>
-                <img src="flickr://Apples"/>
-                <figcaption>Apples</figcaption>
-            </figure>
-            <p>Seed-associated structures that do not fit these informal criteria are usually called by other names,
-                such as vegetables, pods, nut, ears and cones. In biology (botany), a "fruit" is a part of a flowering
-                plant that derives from specific tissues of the flower, mainly one or more ovaries.</p>
-        </aside>
-
-        <aside class="bFlex1">
-            <figure>
-                <img src="flickr://Oranges"/>
-                <figcaption>Oranges</figcaption>
-            </figure>
-            <p>Taken strictly, this definition excludes many structures that are "fruits" in the common sense of the
-                term, such as those produced by non-flowering plants. </p>
-        </aside>
-    </div>
-
-    <hr/>
-
-</div>
-
-<div class="box bHorizontal" id="main-content">
-
-    <div id="archive" class="box bVertical">
-        <article>
-            <h3>This is the first article heading</h3>
-
-            <p>Often the botanical fruit is only part of the common fruit, or is merely adjacent to it. On the other
-                hand, the botanical sense includes many structures that are not commonly called "fruits", such as bean
-                pods, corn kernels, wheat grains, tomatoes, the section of a fungus that produces spores, and many more.
-                However, there are several variants of the biological definition of fruit that emphasize different
-                aspects of the enormous variety that is found among plant fruits.</p>
-        </article>
-
-        <article id="second-article">
-            <h3>This is the second article heading</h3>
-
-            <p>Fruits (in either sense of the word) are the means by which many plants disseminate seeds. Most plants
-                bearing edible fruits, in particular, coevolved with animals in a symbiotic relationship as a means for
-                seed dispersal and nutrition, respectively; in fact, many animals (including humans to some extent) have
-                become dependent on fruits as a source of food. Fruits account for a substantial fraction of world's
-                agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural
-                and symbolic meanings.</p>
-        </article>
-
-        <article>
-            <h3>This is the third article heading</h3>
-
-            <p>Many fruits that, in a botanical sense, are true fruits are actually treated as vegetables in cooking and
-                food preparation, because they are not particularly sweet. These culinary vegetables include cucurbits
-                (e.g., squash, pumpkin, and cucumber), tomatoes, peas, beans, corn, eggplant, and sweet pepper. In
-                addition, some spices, such as allspice and chilies, are fruits, botanically speaking. In contrast,
-                occasionally a culinary "fruit" is not a true fruit in the botanical sense.</p>
-        </article>
-    </div>
-
-    <div id="sidebar" class="box">
-        <aside>
-            <h3>The Sidebar</h3>
-
-            <p>Technically, a cereal grain is also a kind of fruit, a kind which is termed a caryopsis.</p>
-
-            <p>However, the fruit wall is very thin, and is fused to the seed coat, so almost all of the edible grain is
-                actually a seed. </p>
-
-            <p>Therefore, cereal grains, such as corn, wheat and rice are better considered as edible seeds, although
-                some references do list them as fruits.
-
-            <p>Edible gymnosperm seeds are often misleadingly given fruit names, e.g., pine nuts, ginkgo nuts, and
-                juniper berries.</p>
-        </aside>
-    </div>
-
-</div>
+		<ol>
+			<li>Foundation PD. Statistics on Parkinson’s. <a href="http://www.pdf.org/en/parkinson_statistics">http://www.pdf.org/en/parkinson_statistics</a>.</li>
+			<li>WebMD. Parkinson’s Treatment and Care. <a href="http://www.webmd.com/parkinsons-disease/guide/parkinsons-treatment-care">http://www.webmd.com/parkinsons-disease/guide/parkinsons-treatment-care</a></li>
+			<li>Nalls M, Plagnol V, Hernandez D, et al. Imputation of sequence variants for identification of genetic
+				risks for Parkinson’s disease: a meta-analysis of genome-wide association studies. Lancet 2011;377:641.</li>
+			<li>Satake W, Nakabayashi Y, Mizuta I, et al. Genome-wide association study identifies common variants
+				at four loci as genetic risk factors for Parkinson’s disease. Nature genetics 2009;41:1303–1307.</li>
+			<li>Benabid A, Chabardes S, Mitrofanis J, and Pollak P. Deep brain stimulation of the subthalamic nucleus
+				for the treatment of Parkinson’s disease. The Lancet Neurology 2009;8:67–81.</li>
+			<li>Soldner F, Hockemeyer D, Beard C, et al. Parkinson’s disease patient-derived induced pluripotent stem
+				cells free of viral reprogramming factors. Cell 2009;136:964–977.</li>
+		</ol>
+	</div>
+</section>
 
 <footer>
-
-    <section id="about" class="bFlex1">
-        <h3>About Fruit Blog</h3>
-
-        <p>Maecenas a lobortis metus. Etiam nec pharetra justo. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas. In sodales libero nec ante ultricies sodales.</p>
-    </section>
-
-    <section id="social" class="bFlex1">
-        <h3>Wikipedia</h3>
-
-        <p>All the text content on this pag
-            <html lang="en">
-            <head>
-                <meta charset="utf-8">
-                <title>CSS3 Flexible Box Model Tutorial</title>
-                <meta name="description" content="">
-                <meta name="author" content="Richard Shepherd for Smashing Magazine">
-                <!--[if lte IE 8]>
-                <script src="js/flexie.js"></script><![endif]-->
-
-                <link rel="stylesheet" href="css/reset.min.css">
-                <link rel="stylesheet" href="css/style.css">
-                <link rel="stylesheet" href="css/flickrbomb.css">
-                <link href='http://fonts.googleapis.com/css?family=Brawler' rel='stylesheet' type='text/css'>
-
-            </head>
-
-            <body>
-
-            <div id="links">
-                &laquo; <a href="http://www.smashing-magazine.com/" target="_blank">Back to Smashing Magazine</a> :
-                <span id="follow"></span> : <a href="http://www.richardshepherd.com"
-                                               target="_blank">RichardShepherd.com</a> &raquo;
-            </div>
-
-            <header class="box bHorizontal">
-                <hgroup>
-                    <h1>The Fruit Blog</h1>
-
-                    <h2>Everything you wanted to know about fruit</h2>
-                </hgroup>
-
-                <form id="search">
-                    <fieldset>
-                        <label for="searchterm">Search</label>
-                        <input type="search" placeholder="What's your favourite fruit…" name="searchterm"/>
-                        <button type="submit">Search!</button>
-                    </fieldset>
-                </form>
-
-            </header>
-
-            <nav>
-                <ul>
-                    <li><a href="">First Link</a></li>
-                    <li><a href="">Second Link</a></li>
-                    <li><a href="">Third Link</a></li>
-                    <li><a href="">Fourth Link</a></li>
-                    <li><a href="">Fifth Link</a></li>
-                    <li><a href="">Sixth Link</a></li>
-                </ul>
-            </nav>
-
-
-            <div id="container">
-
-                <div id="main" role="main">
-
-                    <figure>
-                        <img src="flickr://Fruit" id="main-image"/>
-                        <figcaption>How tasty does <b>this</b> look!</figcaption>
-                    </figure>
-
-                    <hr/>
-
-                    <div class="box">
-                        <aside class="bFlex2">
-                            <figure>
-                                <img src="flickr://Bananas"/>
-                                <figcaption>Bananas</figcaption>
-                            </figure>
-                            <p>In broad terms, a fruit is a structure of a plant that contains its seeds. The term has
-                                different meanings dependent on context. In non-technical usage, such as food
-                                preparation, fruit normally means the fleshy seed-associated structures of certain
-                                plants that are sweet and edible in the raw state, such as apples, oranges, grapes,
-                                strawberries, juniper berries and bananas.</p>
-                        </aside>
-
-                        <aside class="bFlex1">
-                            <figure>
-                                <img src="flickr://Apples"/>
-                                <figcaption>Apples</figcaption>
-                            </figure>
-                            <p>Seed-associated structures that do not fit these informal criteria are usually called by
-                                other names, such as vegetables, pods, nut, ears and cones. In biology (botany), a
-                                "fruit" is a part of a flowering plant that derives from specific tissues of the flower,
-                                mainly one or more ovaries.</p>
-                        </aside>
-
-                        <aside class="bFlex1">
-                            <figure>
-                                <img src="flickr://Oranges"/>
-                                <figcaption>Oranges</figcaption>
-                            </figure>
-                            <p>Taken strictly, this definition excludes many structures that are "fruits" in the common
-                                sense of the term, such as those produced by non-flowering plants. </p>
-                        </aside>
-                    </div>
-
-                    <hr/>
-
-                </div>
-
-                <div class="box bHorizontal" id="main-content">
-
-                    <div id="archive" class="box bVertical">
-                        <article>
-                            <h3>This is the first article heading</h3>
-
-                            <p>Often the botanical fruit is only part of the common fruit, or is merely adjacent to it.
-                                On the other hand, the botanical sense includes many structures that are not commonly
-                                called "fruits", such as bean pods, corn kernels, wheat grains, tomatoes, the section of
-                                a fungus that produces spores, and many more. However, there are several variants of the
-                                biological definition of fruit that emphasize different aspects of the enormous variety
-                                that is found among plant fruits.</p>
-                        </article>
-
-                        <article id="second-article">
-                            <h3>This is the second article heading</h3>
-
-                            <p>Fruits (in either sense of the word) are the means by which many plants disseminate
-                                seeds. Most plants bearing edible fruits, in particular, coevolved with animals in a
-                                symbiotic relationship as a means for seed dispersal and nutrition, respectively; in
-                                fact, many animals (including humans to some extent) have become dependent on fruits as
-                                a source of food. Fruits account for a substantial fraction of world's agricultural
-                                output, and some (such as the apple and the pomegranate) have acquired extensive
-                                cultural and symbolic meanings.</p>
-                        </article>
-
-                        <article>
-                            <h3>This is the third article heading</h3>
-
-                            <p>Many fruits that, in a botanical sense, are true fruits are actually treated as
-                                vegetables in cooking and food preparation, because they are not particularly sweet.
-                                These culinary vegetables include cucurbits (e.g., squash, pumpkin, and cucumber),
-                                tomatoes, peas, beans, corn, eggplant, and sweet pepper. In addition, some spices, such
-                                as allspice and chilies, are fruits, botanically speaking. In contrast, occasionally a
-                                culinary "fruit" is not a true fruit in the botanical sense.</p>
-                        </article>
-                    </div>
-
-                    <div id="sidebar" class="box">
-                        <aside>
-                            <h3>The Sidebar</h3>
-
-                            <p>Technically, a cereal grain is also a kind of fruit, a kind which is termed a
-                                caryopsis.</p>
-
-                            <p>However, the fruit wall is very thin, and is fused to the seed coat, so almost all of the
-                                edible grain is actually a seed. </p>
-
-                            <p>Therefore, cereal grains, such as corn, wheat and rice are better considered as edible
-                                seeds, although some references do list them as fruits.
-
-                            <p>Edible gymnosperm seeds are often misleadingly given fruit names, e.g., pine nuts, ginkgo
-                                nuts, and juniper berries.</p>
-                        </aside>
-                    </div>
-
-                </div>
-
-                <footer>
-
-                    <section id="about" class="bFlex1">
-                        <h3>About Fruit Blog</h3>
-
-                        <p>Maecenas a lobortis metus. Etiam nec pharetra justo. Pellentesque habitant morbi tristique
-                            senectus et netus et malesuada fames ac turpis egestas. In sodales libero nec ante ultricies
-                            sodales.</p>
-                    </section>
-
-                    <section id="social" class="bFlex1">
-                        <h3>Wikipedia</h3>
-
-                        <p>All the text content on this page has been taken from the 'Fruit' entry on Wikipedia. <a
-                                href="http://en.wikipedia.org/wiki/Fruit" target="_blank">Check it out!</a> Content
-                            released under CC-BY-SA <a href="http://creativecommons.org/licenses/by-sa/3.0/"
-                                                       target="_blank">http://creativecommons.org/licenses/by-sa/3.0/</a>
-                        </p>
-                    </section>
-
-                    <section id="contact" class="bFlex1">
-                        <h3>Talk to us!</h3>
-
-                        <p>Maecenas a lobortis metus. Etiam nec pharetra justo. Pellentesque habitant morbi tristique
-                            senectus et netus et malesuada fames ac turpis egestas.</p>
-                    </section>
-
-
-                </footer>
-
-            </div>
-            <!-- // container -->
-
-
-            <script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
-            <script src="js/jquery-flickrbomb-min.js"></script>
-            <script src="http://platform.twitter.com/anywhere.js?id=mDTT9Vl9XgxHglv1lIeRpg&v=1"
-                    type="text/javascript"></script>
-
-            <script type="text/javascript">
-
-                twttr.anywhere(function (T) {
-                    T('#follow').followButton("richardshepherd");
-                });
-
-            </script>
-
-
-            <script>
-                var _gaq = [
-                    ["_setAccount", "UA-XXXXX-X"],
-                    ["_trackPageview"]
-                ]; // Change UA-XXXXX-X to be your site's ID
-                (function (d, t) {
-                    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                    g.async = 1;
-                    g.src = ("https:" == location.protocol ? "//ssl" : "//www") + ".google-analytics.com/ga.js";
-                    s.parentNode.insertBefore(g, s)
-                }(document, "script"));
-            </script>
-
-            </body>
-            </html>
-            e has been taken from the 'Fruit' entry on Wikipedia. <a href="http://en.wikipedia.org/wiki/Fruit"
-                                                                     target="_blank">Check it out!</a> Content released
-            under CC-BY-SA <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">http://creativecommons.org/licenses/by-sa/3.0/</a>
-        </p>
-    </section>
-
-    <section id="contact" class="bFlex1">
-        <h3>Talk to us!</h3>
-
-        <p>Maecenas a lobortis metus. Etiam nec pharetra justo. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas.</p>
-    </section>
-
-
+	Class Project by Gary Ge, Kurt Ostfeld, Sonny Tran for BME365R at The University of Texas, Fall, 2012.
 </footer>
-
-</div>
-<!-- // container -->
-
-
-<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
-<script src="js/jquery-flickrbomb-min.js"></script>
-<script src="http://platform.twitter.com/anywhere.js?id=mDTT9Vl9XgxHglv1lIeRpg&v=1" type="text/javascript"></script>
-
-<script type="text/javascript">
-
-    twttr.anywhere(function (T) {
-        T('#follow').followButton("richardshepherd");
-    });
-
-</script>
-
-
-<script>
-    var _gaq = [
-        ["_setAccount", "UA-XXXXX-X"],
-        ["_trackPageview"]
-    ]; // Change UA-XXXXX-X to be your site's ID
-    (function (d, t) {
-        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        g.async = 1;
-        g.src = ("https:" == location.protocol ? "//ssl" : "//www") + ".google-analytics.com/ga.js";
-        s.parentNode.insertBefore(g, s)
-    }(document, "script"));
-</script>
 
 </body>
 </html>

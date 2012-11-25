@@ -1,7 +1,15 @@
-/**
- * Created with IntelliJ IDEA.
- * User: kurt
- * Date: 11/24/12
- * Time: 6:54 PM
- * To change this template use File | Settings | File Templates.
- */
+
+function navigate(newDivId) {
+    var navigatable = document.getElementById('navigatable');
+    var newDiv = document.getElementById(newDivId);
+
+    for (i = 0; i < navigatable.children.length; i++) {
+        var c = navigatable.children[i];
+
+        if (c != newDiv) {
+            c.style.display = "none";
+        }
+    }
+
+    newDiv.style.display = "block";
+}
