@@ -1,0 +1,18 @@
+# build artifacts
+
+build/
+target/
+.gradle/
+
+
+# IDE configuration
+
+.classpath
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.project
+.settings/
+atlassian-ide-plugin.xml
