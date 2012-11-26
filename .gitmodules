@@ -1,0 +1,3 @@
+[submodule "parkinsons"]
+	path = parkinsons
+	url = git@github.com:physiologykurt/parkinsons.git
