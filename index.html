@@ -15,23 +15,26 @@
 
 <body>
 
-<header class="box bHorizontal">
-	<hgroup>
+<header class="outer">
+	<hgroup class="inner">
 		<h1>Parkinson's Disease</h1>
 	</hgroup>
 </header>
 
-<nav>
-	<ul>
-		<li><button onclick="navigate('physiology');">Physiology</button></li>
-		<li><button onclick="navigate('pathophysiology');">Pathophysiology</button></li>
-		<li><button onclick="navigate('relevance');">Clinical Relevance</button></li>
-		<li><button onclick="navigate('developments');">Recent Developments</button></li>
-		<li><button onclick="navigate('references');">References</button></li>
-	</ul>
+<nav class="outer">
+	<div class="inner">
+		<button onclick="navigate('physiology');">Physiology</button>
+		<button onclick="navigate('pathophysiology');">Pathophysiology</button>
+		<button onclick="navigate('relevance');">Clinical Relevance</button>
+		<button onclick="navigate('developments');">Recent Developments</button>
+		<button onclick="navigate('references');">References</button>
+	</div>
+
+	<div style="clear: left;"></div>
 </nav>
 
-<section id="navigatable">
+<div class="outer">
+<section id="navigatable" class="inner">
 	<div id="physiology" style="display: block;">
 		Physiology Section<br/>
 		<br/>
@@ -45,13 +48,43 @@
 		Nulla facilisi. Proin interdum quam semper nibh euismod sit amet fermentum elit rutrum. Quisque lacinia, tellus et dapibus hendrerit, massa eros consectetur massa, vitae sagittis nulla lectus ultricies erat. Sed interdum, erat sed consectetur sollicitudin, erat neque cursus mi, ut cursus dui urna vitae tortor. Pellentesque iaculis viverra tortor sed facilisis. Phasellus malesuada adipiscing egestas. In in quam urna. Aenean feugiat elit vel urna placerat eu luctus eros sodales.
 	</div>
 	<div id="relevance" style="display: none;">
-		Relevance Section<br/>
-		<br/>
+		<h2>Clinical Relevance</h2>
 
 		Vestibulum imperdiet scelerisque ligula in gravida. Nam elementum nisl id urna eleifend vel eleifend elit facilisis. Praesent id lectus quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat lectus nec odio cursus at interdum elit eleifend. Vivamus id ultrices arcu. Nullam dapibus nisi nec lectus aliquam lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer odio sapien, suscipit id hendrerit sed, varius eu diam. Nunc eget nulla urna, suscipit facilisis nisi.
 	</div>
 	<div id="developments" style="display: none;">
-		Developments
+		<h2>Recent Developments</h2>
+
+		<h3>Genome Wide Association Studies</h3>
+
+		Genome wide association studies are being done to determine which genomic factors are statistically related to the disease. These studies look for genotypes that have a much higher frequency in people with Parkinson's disease than in people without Parkinson's disease. Such genotype factors are considered risk factors. This information is useful in understanding the mechanisms of the disease and may be useful in designing future clinical treatments.<br/>
+		<br/>
+		Other diseases, particularly monogenic disesases, have a very clear link between genotype and disease. Diseases like Parkinson's have a much more complex relationship. Even mutations that have a strong correlation with Parkinson's disease are often present in asymptomatic individuals.<br/>
+		<br/>
+		One team has confirmed existing risk loci and identified two new risk loci<sup>4</sup>. Their results also provide evidence for the genetic heterogeneity of the disease.
+
+		<h3>Modeling Disease with cultured dopaminergic neurons from patient derived induced pluripotent stem cells</h3>
+
+		A suspected primary cause of Parkinson's disease is death of dopaminergic neurons in the substantia nigra deep in the mesencephalon. This area of the brain is not surgically accessible in living patients, so it is difficult to study these cells or test treatments directly against this tissue. One of the promising areas of research involves recreating these dopaminergic neurons in vivo so that they can be studied, and new drugs and treatments and be directly tested. This can be done by taking fibroblast cells from Parkinson's patients, converting them to induced pluripotent stem cells (iPSCs) and then differentiating them into dopaminergic neurons.<br/>
+		<br/>
+		Unfortunately, creating iPSCs typically relies on viral transduction of four transcription factors. These viral factors provide the desired induced pluripotency but cause unwanted side effects. They cause an increased probability of tumors and they they cause a different gene expression profile from true embryonic stem cells. Recent research demonstrates improved techniques using Cre-recombinase excisable viruses for developing the iPSCs without the viral reprogramming factors<sup>6</sup>. This eliminates some of the increased tumor probability and provides a more true embryonic gene expression profile.
+
+		<h3>Advances in Surgical Brain Stimulation</h3>
+
+		In the past, ablation of portions of the thalamus was used to treat cases of advanced parkinson's disease. Today, surgical brain stimulation techniques have almost completely replaced that process. The brain stimulation techniques replicate the symptom improvement benefits of ablation with a more tunable and reversible process.
+
+		<h3>Other Promising Techniques<sup>5</sup></h3>
+
+		<ul>
+			<li>Surgical stimulation of cortical regions of the brain: Stimulation of the thalamus is a common treatment, however stimulation of other brain tissue has shown improvement in reducing other Parkinsons symptoms.</li>
+			<li>Neural Grafts: Grafting neurons into the brain. Additionally, stem cell derived neurons resolves immunological issues but potentially introduces oncological issues. This is a very promising technique but it is still in the early stages of patient trials.</li>
+			<li>Improved drugs: Currently, levodopa is the primary drug used to reduce most of the symptoms of Parkinson's Disease. Unfortunately, levodopa has the side effect of dyskinesia. New drugs are in development that reduce PD symptoms without the dyskinesia side effect.</li>
+			<li>Dopamine agonist infusion therapy: Administration of dopamine agonists via duodeno-gastrostomy has been shown to reduce PD symptoms without dysinesia side effects of levodopa.</li>
+		</ul>
+
+
+
+
 	</div>
 	<div id="references" style="display: none;">
 		<h2>References</h2>
@@ -70,6 +103,7 @@
 		</ol>
 	</div>
 </section>
+</div>
 
 <footer>
 	Class Project by Gary Ge, Kurt Ostfeld, Sonny Tran for BME365R at The University of Texas, Fall, 2012.

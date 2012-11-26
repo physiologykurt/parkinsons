@@ -1,29 +1,52 @@
 body {
     font-family: 'Sanchez', serif;
+    background: #f2f2f2;
+}
 
-    display: -webkit-flex;
-    display:         flex;
-    -webkit-flex-direction: column;
-            flex-direction: column;
+.outer {
+    width: 100%;
+}
 
-    padding: 25px 0;
+.inner {
+    position: relative;
+    max-width: 750px;
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
+header {
+    background: #212121;
+}
+
+hgroup {
+    color: #fff;
+}
+
+nav button {
+    background-color: #212121;
+    color: white;
+    float: left;
+    display: inline;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    padding-top: 4px;
+    text-align:center;
 }
 
 nav {
     text-align: center;
-    -webkit-align-self: center;
-            align-self: center;
 }
 
 nav ul {
     list-style-type: none;
-
-    display: -webkit-flex;
-    display:         flex;
-    -webkit-align-items: stretch;
-            align-items: stretch;
-    -webkit-flex: 3 1 auto;
-            flex: 3 1 auto;
+    float: left;
+    display: inline;
+    text-align: center;
 }
 
 nav button {
