@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
-<body>
+<body onload="pageLoad();">
 
 <header class="outer">
 	<hgroup class="inner">
@@ -26,8 +26,8 @@
 		<button onclick="navigate('physiology');">Physiology</button>
 		<button onclick="navigate('pathophysiology');">Pathophysiology</button>
 		<button onclick="navigate('relevance');">Clinical Relevance</button>
+		<button onclick="navigate('treatment');">Treatment</button>
 		<button onclick="navigate('developments');">Recent Developments</button>
-		<button onclick="navigate('references');">References</button>
 	</div>
 
 	<div style="clear: left;"></div>
@@ -35,63 +35,320 @@
 
 <div class="outer">
 <section id="navigatable" class="inner">
-	<div id="physiology" style="display: block;">
-		Physiology Section<br/>
+	<div id="physiology_content" style="display: none;">
+		<h2>Physiology</h2>
+
+		For the brain to initiate movement, it must have information about the environment around a person.
+		The information is collected through sensory organs the relayed to the relevant parts of the brain<sup>1</sup>.
 		<br/>
 
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit tortor vel lacus lacinia commodo. Suspendisse sed risus lacus. Sed condimentum dictum leo a cursus. Aenean consequat odio ut nisi adipiscing aliquam. Etiam et nunc ut justo ultricies sagittis viverra eu dolor. Fusce mattis lacus nec nulla sodales eu condimentum leo euismod. Integer est mauris, posuere nec blandit eget, blandit a nulla. In iaculis consequat nisl. Fusce aliquam tincidunt laoreet. Nam a ullamcorper dui. Pellentesque vitae tellus dolor, vel lacinia orci. Morbi egestas placerat sem. Suspendisse accumsan ipsum in velit fringilla tincidunt. Curabitur vitae erat nec elit dapibus molestie nec eu dui. Mauris non vestibulum nisi.
-	</div>
-	<div id="pathophysiology" style="display: none;">
-		pathophysiology Section<br/>
+		<ul>
+			<li>The frontal lobe uses information gathered by the senses to plan movements</li>
+			<li>The specific area involved is the prefrontal cortex and the supplementary motor areas, which are located adjacent and rostral to the primary motor cortex</li>
+			<li>Prefrontal cortex coordinates planned movements and once it analyzes information, projects it to the premotor cortex and supplementary motor areas, then on to the primary motor cortex</li>
+			<li>Movement of specific areas of the body are due to direct electrical stimulation of the primary motor cortex, which then passes the signals on to the spinal cord and appropriate areas for movement</li>
+		</ul>
+
+		<div style="text-align: center;">
+			<img src="images/brain.jpg"></img>
+			<br/>
+			<span style="font-weight: bold;">Figure 1:</span> This diagram shows what is discussed above (<sup>5</sup>, 236)
+		</div>
 		<br/>
 
-		Nulla facilisi. Proin interdum quam semper nibh euismod sit amet fermentum elit rutrum. Quisque lacinia, tellus et dapibus hendrerit, massa eros consectetur massa, vitae sagittis nulla lectus ultricies erat. Sed interdum, erat sed consectetur sollicitudin, erat neque cursus mi, ut cursus dui urna vitae tortor. Pellentesque iaculis viverra tortor sed facilisis. Phasellus malesuada adipiscing egestas. In in quam urna. Aenean feugiat elit vel urna placerat eu luctus eros sodales.
-	</div>
-	<div id="relevance" style="display: none;">
-		<h2>Clinical Relevance</h2>
+		<h3>Cortical-Basal Ganglia Loop<sup>1</sup></h3>
 
-		Vestibulum imperdiet scelerisque ligula in gravida. Nam elementum nisl id urna eleifend vel eleifend elit facilisis. Praesent id lectus quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat lectus nec odio cursus at interdum elit eleifend. Vivamus id ultrices arcu. Nullam dapibus nisi nec lectus aliquam lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer odio sapien, suscipit id hendrerit sed, varius eu diam. Nunc eget nulla urna, suscipit facilisis nisi.
+		<ul>
+			<li>Basal ganglia is highly important in movement</li>
+			<li>Comprised of the following nuclei:</li>
+			<ul>
+				<li>Caudate nucleus</li>
+				<li>Putamen</li>
+				<li>Globus Pallidus</li>
+			</ul>
+			<li>Inputs from cerebral cortex are received in the basal ganglia and substantia nigra</li>
+			<ul>
+				<li>Outputs of these areas are the primary motor cortex, supplementary motor area, motor nuclei of the brain stem, and the premotor cortex by way of the thalmus</li>
+			</ul>
+			<li>Location of nuclei and pathway of movement form a circular loop enabling the basal ganglia to receive information about planned movements and motion performed by the primary motor cortex</li>
+			<li>Basal ganglia controls the motor cortex</li>
+		</ul>
+		<br/>
+
+		<div style="text-align: center;">
+			<img src="images/basalganglia.jpg"></img>
+			<br/>
+			<span style="font-weight: bold;">Figure 2:</span> Two schematic drawings of coronal sections of human brain labelling the basal ganglia. Blue=striatum, green=globus pallidus (external and internal segments), yellow=subthalamic nucleus, red=substantia nigra (pars reticulata and pars compacta). The right section is the deeper one, closer to the back of the head. Images taken from wikipedia from the out of copyright Gray's anatomy<sup>3</sup>.
+		</div>
+		<br/>
+
+		<div style="text-align: center;">
+			<img src="images/InformationFlow.png"></img>
+			<br/>
+			<span style="font-weight: bold;">Figure 3:</span> This depicts the flow of information through the basal ganglia as detailed above<sup>1</sup>.
+		</div>
+		<br/>
+
+		<ul>
+			<li>Inputs from the primary cortex and primary somatosensory cortex get projected to the putamen</li>
+			<li>Signal is the passed on to the caudate followed by the globus pallidis which has the following outputs</li>
+			<ul>
+				<li>Motor nuclei of the brain stem</li>
+				<li>Subthalmic nucleus</li>
+			</ul>
+			<li>From Globus pallidus, the signal is projected to motor cortex by the ventrolateral thalmus</li>
+			<li>Feedback loop is completed when information from primary motor and primary somatosensory cortex are passed on to the putamen</li>
+			<li>Loop is maintained by glutamate and GABA</li>
+			<li>Substantia nigra sens both excitatory and inhibitory signals to the caudate through the messenger dopamaine, causing innervation of different areas of the putamen via the caudate.</li>
+		</ul>
+
+		<div style="text-align: center;">
+			<img src="images/CortoBasalGangliaLoop.jpg"></img>
+			<br/>
+			<span style="font-weight: bold;">Figure 4:</span> Corto-basal ganglia loop. Red arrows are inhibitory pathways, and black arrows are excitatory connections (<sup>5</sup>, 244)
+		</div>
+		<br/>
+
+		<h3>Parkinson's Disease</h3>
+
+		<ul>
+			<li>Occurs in the midbrain region, specifically occurs in the substantia nigra, which is composed of two sections, the pars compacta and pars reticula.</li>
+			<li style="font-weight: bold;">Substantia Nigra<sup>1</sup>:</li>
+			<ul>
+				<li>A small region in the brain stem located just above the spinal cord</li>
+				<li>It is a dark section of the brain due to its high concentration of dopaminergic neurons, which have high concentrations of melanin</li>
+				<li>Normally appears black</li>
+				<li>Parkinson's disease is characterized by the destruction and loss of pigment of the substania nigra (<sup>4</sup>, 948)</li>
+				<li>Primarily responsible for the motor planning, reward seeking, as well as learning</li>
+				<li style="font-weight: bold;">Pars reticula</li>
+				<ul>
+					<li>Acts as an output of the basal ganglia complex, relaying processed signals from the basal ganglia to the thalamus and superior colliculus</li>
+					<li>The pars reticula is composed of many fast spiking neurons, which have a mean output of over 60 Hz.</li>
+				</ul>
+				<li style="font-weight: bold;">Pars compacta</li>
+				<ul>
+					<li>Acts largely as an input to the basal ganglia complex</li>
+					<li>The dopamine neurons activate in response to some outside stimuli which helps reinforce behavior</li>
+					<li>The pars compacta also plays a role in motor function, though indirectly, as lesions to the area are documented to reduce fine motor control.</li>
+				</ul>
+			</ul>
+			<li>Decreasing production of dopamine depresses the pathway, resulting in abnormal behavior resulting in the expression of symptoms associated with Parkinson's<sup>2</sup></li>
+			<li>In addition, a decrease in the innervation of the caudate is seen, which leads to increased inhibitory behavior by the globus pallidus, ultimately resulting in hyperkinesis</li>
+			<li>The excitatory signal from the subthalmic nucleus which innervates the internal globus pallidus decreases, which leads to tremors, rigidity, and other symptoms of Parkinson's</li>
+			<li>In summary, a decreased amount of dopamine will cause an inhibitory signal in the motor cortex rather than a typical excitatory one</li>
+		</ul>
+
+		<div style="text-align: center;">
+			<img src="images/ParkinsonsSchematic.png"></img>
+			<br/>
+			<span style="font-weight: bold;">Figure 5:</span> This is an overall schematic of Parkinson's Disease (<sup>2</sup>, 71)
+		</div>
+		<br/>
+
+		<h2>References</h2>
+
+		<ol>
+			<li><a href="http://www.macalester.edu/psychology/whathap/UBNRP/parkinsons/anatomy%20&%20physio.html">http://www.macalester.edu/psychology/whathap/UBNRP/parkinsons/anatomy%20&%20physio.html</a></li>
+			<li>Black, Ira B., Information in the Brain: A Molecular Perspective. Cambridge, MA: MIT Press, 1991, pp. 68-72.</li>
+			<li><a href="http://upload.wikimedia.org/wikipedia/commons/3/33/Basal-ganglia-coronal-sections-large.png">http://upload.wikimedia.org/wikipedia/commons/3/33/Basal-ganglia-coronal-sections-large.png</a></li>
+			<li>Marsden, C. D., "Parkinson's Disease" The Lancet, April 21, 1990, Vol.335, No. 8695; pp. 948-953.</li>
+			<li>Carlson, Neil Physiology of Behavior, 6th ed. Needham Heights, MA: Allyn and Bacon, 1998, pp.234-236, 242-245.</li>
+		</ol>
 	</div>
-	<div id="developments" style="display: none;">
+	<div id="pathophysiology_content" style="display: none;">
+		<h2>Pathophysiology</h2>
+
+		The symptoms of Parkinson’s disease emerge in correlation with the reduction of dopamine-secreting cells in the pars compacta of the substantia nigra. Specifically, it has been observed that patients lose up to 60-70% of these dopaminergic (DA) neurons in the substantia nigra before clinical symptoms appear, though the mechanism behind DA neuron death is still unknown and debatable. Additionally, 80% of the striatal nerve terminal is asymmetrically lost before Parkinsonism becomes apparent<sup>1</sup>. Because of the striatum’s key role in coordinating pathways of movement<sup>2</sup> as well as its role as an input source for sensory signals to other components of the basal ganglia, the reduction of dopaminergic innervations to the striatum may disturb movement-regulating activity in the basal ganglia neural circuit. Two important pathways exist in this neural circuit, namely the direct pathway (which manages voluntary movement) and the indirect pathway (which works complementarily to the direct pathway by preventing undesirable muscle contractions during voluntary movement<sup>3</sup>. When dopamine levels fall, an imbalance between dopamine and acetylcholine neurotransmitters can interfere with the patient’s coordination and movement<sup>4</sup>. While the direct pathway becomes inhibited from DA neuron loss, the indirect pathway becomes excited, leading to hypokinesia (decreased body movement). Normally, the thalamus would send excitatory signals to the motor cortex. However, the lack of dopamine production will inhibit this signal projection and further exacerbate hypokinesia.<br/>
+		<br/>
+		Dopamine travels through the brain via four different pathways. The nigrostriatal pathway is the most noticeably affected. Because it is involved in movement coordination, disruption of this channel easily leads to a number of motor manifestations, primarily the following:<br/>
+
+		<ol>
+			<li>Resting tremor:  usually in the arm or leg; typically occurs in unilateral fashion at onset but may eventually affect both sides of the body</li>
+			<li>Muscle rigidity: stiffness in limb movement</li>
+			<li>Bradykinesia: slowed movement; can cause what is known as ‘stone face,’ or loss of facial expression; can also cause difficulty in swallowing which consequently may result in aspiration pneumonia</li>
+			<li>Postural instability: inability to stand upright; may start causing falls a couple years after diagnosis, leading to head injuries or even bone fractures.</li>
+		</ol>
+
+		<br/>
+
+		<div style="text-align: center;">
+			<img src="images/Lewy_Body_Disease-2.jpg"></img>
+			<br/>
+			Source<sup>5</sup>
+		</div>
+
+		<br/>
+		The above symptoms are the most common as well as the first symptoms commonly experienced among patients. Because Parkinsonism develops so slowly, patients can live for years of normal productivity before diagnosed with PD<sup>6</sup>.<br/>
+		<br/>
+		Though PD is better recognized by its physical manifestations, the lack of dopamine through the other three pathways – namely, the mesocortical; mesolimbic; and turberoinfundibular pathways – is thought to be associated with cognitive manifestations of Parkinson’s. 25-33% of PD patients have the cardinal non-motor sign of dementia (usually a mild form); while 25-33% have mild cognitive impairment (MCI), a less severe loss of intellectual ability. Parkinson’s patients may even experience a combination of depression, apathy, and/or anxiety. Hallucinations and delusions may occur in 4% of PD patients<sup>7</sup>. Besides those already listed, some less distinguished symptoms may include oily skin, erectile dysfunction, constipation, shortness of breath, increased sweating, insomnia, and difficulty urinating<sup>8</sup>.<br/>
+		<br/>
+		Research suggests the ubiquitin proteasome system (UPS) impairment is connected to Parkinson’s. More specifically, a protein by the name of alpha-synuclein becomes attached to ubiquitin in the damaged neurons. The cells’ proteosomes, which typically break down unwanted proteins, is unable to denature this complex due to a mechanism not yet fully understood. These unwanted, misfolded alpha-synuclein proteins begin to unnaturally accumulate within the cell, which may lead to neuron degeneration or inflammation and an aggregation of cytoplasmic inclusions called Lewy Bodies.<br/>
+		<br/>
+		<div style="text-align: center;">
+			<img src="images/lewy-body.jpg"></img>
+			<br/>
+			Source<sup>9</sup>
+		</div>
+		<br/>
+
+		Such Lewy bodies have been noted to accumulate in the substantia nigra and well beyond – usually starting from the brain stem to the limbic system and eventually to the neocortex which is responsible for complex cognitive functions<sup>10</sup>. Neuritis resulting from the Lewy bodies would contribute to decreased dopamine levels, cell death, and theoretically lead to Parkinson’s<sup>11</sup>. Along with such alpha-synuclein protein accumulation and Lewy bodies, researchers have observed excessive amounts of iron in the dopaminergic cells. The iron, a toxin to neurons, binds to neuromelanin inside the nerve cells of the substantia nigra. Therefore, it is possible that neuromelanin serves to defend the cells from damage. The iron even promotes further synuclein aggregation through oxidation reactions to advance the probability of cell death<sup>12</sup>.<br/>
+
+		<h2>References</h2>
+
+		<ol>
+			<li>Sujith O.K., Lane C. Theraputic Options for Continuous Dopaminergic Stimulation in Parkinson’s Disease. Ther Adv Neurol Disord. 2009 March; 2(2): 105–113.</li>
+			<li>Wisegeek. What Is the Striatum? <a href="http://www.wisegeek.com/what-is-the-striatum.htm">http://www.wisegeek.com/what-is-the-striatum.htm</a> (accessed Oct 27, 2012).</li>
+			<li>Nambu A. A new dynamic model of the cortico-basal ganglia loop. Prog Brain Res. 2004; 143: 461-466.</li>
+			<li>CNS Degenerative Diseases. Parkinson Disease. <a href="http://library.med.utah.edu/WebPath/TUTORIAL/CNS/CNSDG.html">http://library.med.utah.edu/WebPath/TUTORIAL/CNS/CNSDG.html</a> (accessed Oct 27, 2012).</li>
+			<li>Nigrostriatal pathway. (n.d.) Retrieved from <a href="http://trialx.com/curetalk/wp-content/blogs.dir/7/files/2011/05/diseases/Lewy_Body_Disease-2.jpg">http://trialx.com/curetalk/wp-content/blogs.dir/7/files/2011/05/diseases/Lewy_Body_Disease-2.jpg</a> .</li>
+			<li>UCSF Medical Center. Parkinson’s Disease: Signs and Symptoms. <a href="http://www.ucsfhealth.org/conditions/parkinsons_disease/signs_and_symptoms.html">http://www.ucsfhealth.org/conditions/parkinsons_disease/signs_and_symptoms.html</a> (accessed Oct 27, 2012).</li>
+			<li>McNamara P. About. Postural Instability. . (<a href="http://parkinsons.about.com/od/glossary/g/postural_instability.htm">http://parkinsons.about.com/od/glossary/g/postural_instability.htm</a>). 2009 April.</li>
+			<li>Friedman J. Parkinson’s disease psychosis 2010: A review article. Parkinsonism & Related Disorders. 2010 November; 16(9): 553-560.</li>
+			<li>Lewy body. (n.d.) Retrieved from  <a href="http://www.elements4health.com/images/stories/lewy-body.jpg">http://www.elements4health.com/images/stories/lewy-body.jpg</a> .</li>
+			<li>Movement Disorder Virtual University. Parkinson’s Disease: Pathology. <a href="http://www.mdvu.org/library/disease/pd/par_path.asp">http://www.mdvu.org/library/disease/pd/par_path.asp</a>).</li>
+			<li>Graduate student. Oxbridge Writers. Ubiquitin proteasome system in Parkinson’s disease. Sciences.</li>
+			<li>Parkinson’s Disease Pathophysiology. News Medical. <a href="http://www.news-medical.net/health/Parkinsons-Disease-Pathophysiology.aspx">http://www.news-medical.net/health/Parkinsons-Disease-Pathophysiology.aspx</a> (accessed Nov 27, 2012).</li>
+		</ol>
+	</div>
+	<div id="relevance_content" style="display: none;">
+		<h2>Clinical Relevance<sup>1</sup></h2>
+
+		<ul>
+			<li>Up to 1 million people (0.37% population) in the U.S. are affected, more than those with multiple sclerosis, muscular dystrophy, and Lou Gehrig’s disease combined; about 60,000 Americans diagnosed per year. That’s 1 in 272 people, not including cases that go by undetected.</li>
+			<li>7 to 10 million people affected worldwide</li>
+			<li>96% of patients diagnosed after age of 50.</li>
+			<li>The average age of patients at the onset of the symptoms is approximately 60 years.</li>
+			<li>$25 billion dollars spent on PD-related expenses in the U.S. alone</li>
+			<li>Medication can cost avg. of $2,500 a year</li>
+			<li>Surgical therapy can cost an avg. of $100,000 a year</li>
+			<li>Observations note that PD is slightly more prevalent in men than in women, about 1.5 times as prevalent.</li>
+			<li>Studies have shown more cases of Parkinson’s disease in whites than in African Americans or Asians. </li>
+			<li>Initial symptoms typically begin in the upper arms or hands, and generally in a unilateral fashion.</li>
+			<li>Often these early symptoms are concluded to be attributed to old age; many times it takes around 2-3 years from the first record of those symptoms to the actual diagnosis of Parkinson’s.</li>
+			<li>The accuracy of PD diagnosis itself is approximately 80%. </li>
+			<li>It is interesting to note that the Northeast and Midwest are the two U.S. regions with the highest number of the country’s PD cases. These two regions additionally contain the highest concentration of metals processing and agriculture; therefore, researchers are proposing a possible link between environmental factors such as copper, lead, and herbicides and Parkinson’s.</li>
+		</ul>
+
+		<h2>References</h2>
+
+		<ol>
+			<li>SACT. Parkinson’s Disease Statistics. <a href="http://www.sactrust.org/pd_stats.htm">http://www.sactrust.org/pd_stats.htm</a> (accessed Nov 27, 2012).</li>
+		</ol>
+	</div>
+	<div id="treatment_content" style="display: none;">
+		<h2>Treatment, Care, Medication</h2>
+
+		There are still no close signs of cure for Parkinson’s disease. However, symptoms can still be treated and reduced through several methods.
+		The approach to treatment will vary with each individual and with the different stages of PD.
+		Whereas exercise and physical therapy are options helpful at any stage and for generally anyone,
+		doctors may plan to wait until the symptoms begin to interfere with one’s usual daily activities to prescribe any specific drugs.
+		Side effects such as nausea, fatigue, or sleepiness for such drugs must be noted, however; and pre-consultation with one’s doctor is advised.<sup>1</sup>
+		<br/>
+		<br/>
+
+		<div style="text-align: center;">
+			<img src="images/Drugs.jpg"></img>
+			<br/>
+			Source<sup>4</sup>
+		</div>
+
+		<h3>Drugs</h3>
+
+		<ul>
+			<li><span style="font-weight: bold;">Anticholinergics (like benztropine or trihexyphenidyl)</span>: helps maintain the brain’s balance between dopamine and acetylcholine by inhibiting the actions of acetylcholine. They also block nerve impulses that pertain to motor control. Anticholinergics are used more by younger patients and have been observed to control tremor well.</li>
+			<li><span style="font-weight: bold;">MAO-B inhibitors (like rasagiline or selegiline)</span>: short for monoamine oxidase inhibitors. They prolong the span of dopamine’s effects in the brain before it is broken down. It is possible that these inhibitors also facilitate the dopamine release from neurons.</li>
+			<li><span style="font-weight: bold;">Amantadine</span>: helps to reduce dyskinesia, though the mechanism by which it works is unclear. It is possible that the medicine increases the amount of dopamine in the brain while simultaneously inhibiting acetylcholine reception in order to maintain proper motor control.</li>
+			<li><span style="font-weight: bold;">Dopamine agonists</span>: stimulate dopamine receptors in the brain by behaving like dopamine; help reduce PD’s motor function symptoms such as stiffness or slowness</li>
+			<li><span style="font-weight: bold;">Levodopa (L-Dopa)</span>: most commonly used drug for PD due to its efficacy and relatively reduced side effects compared to other drugs. L-Dopa converts to dopamine in the brain and works best as a counter to rigidity and hypokinesia. Carbidopa is a medicine that, when taken alongside L-Dopa, will prevent the latter from converting itself outside the brain. L-Dopa’s main unwanted traits include psychiatric effects such as confusion; nausea; anxiety; hallucinations; and sleepiness and (to a lesser extent) physical effects such as dyskinesia; low blood pressure; breathing difficulty; and gastrointestinal disturbances. However, doctors have noticed reduced efficacy and a rise in such effects after five years of use – namely, bradykinesia, tremor, and muscle spasms. Therefore, it may not be uncommon for doctors to couple the prescription of L-Dopa with dopamine agonists like pramipexole or ropinirole, which serve to delay the need for the use of L-Dopa. Additionally, a liquid form is available that may reduce fluctuations in L-Dopa’s effects. It must be noted that one’s diet may need to change because the drug may be less effective when taken simultaneously with protein. [1][2]</li>
+		</ul>
+
+		<div style="text-align: center;">
+			<img src="images/levodopa.png"></img>
+			<br/>
+			Chemical structure of L-Dopa<sup>3</sup>
+		</div>
+
+		<h3>Surgery</h3>
+
+		Surgery is another option that may reduce symptoms, though it in no way cures Parkinson’s or stops the need for drugs. Operations may be considered when drugs greatly reduce in effectiveness. Currently there are a few options available. Pallidotomy is the destruction of a small region of the globus pallidus (which may serve as an origin for some symptoms) of the brain via a very cold probe that scars the tissue. Similarly, a thalamotomy can be executed to destroy areas of the thalamus that may be causing the symptoms. The most popular surgical method for treating advanced Parkinson’s disease is deep brain stimulation in which electrical impulses are used to stimulate the thalamus and reducing tremor (for more information on the deep brain stimulation, please proceed to the Recent Developments tab)<sup>1</sup>.<br/>
+		<br/>
+
+		<div style="text-align: center;">
+			<img src="images/brainstimulation.jpg"></img>
+			<br/>
+			Deep brain stimulation on a Parkinson’s patient<sup>5</sup>
+		</div>
+
+		<h2>References</h2>
+
+		<ol>
+			<li>WebMD. Parkinson’s Disease Health Center. <a href="http://www.webmd.com/parkinsons-disease/guide/parkinsons-treatment-care">http://www.webmd.com/parkinsons-disease/guide/parkinsons-treatment-care</a> (accessed Nov 27, 2012).</li>
+			<li>New York Times. Parkinson’s Disease. <a href="http://health.nytimes.com/health/guides/disease/parkinsons-disease/levadopa-%28l-dopa%29.html">http://health.nytimes.com/health/guides/disease/parkinsons-disease/levadopa-%28l-dopa%29.html</a> (accessed Nov 27, 2012).</li>
+			<li>Chemical structure of L-Dopa. (n.d.) Retrieved from
+				<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/3%2C4-Dihydroxy-L-phenylalanin_%28Levodopa%29.svg/290px-3%2C4-Dihydroxy-L-phenylalanin_%28Levodopa%29.svg.png">Wikipedia</a></li>
+			<li>Drugs. (n.d.) Retrieved from <a href="http://www.viartis.net/parkinsons.disease/images/Drugs.jpg.">http://www.viartis.net/parkinsons.disease/images/Drugs.jpg.</a> </li>
+			<li>Deep brain stimulation. (n.d.) Retrieved from <a href="http://www.popsci.com/files/imagecache/article_image_large/articles/deep%20brain%20stimulation.jpg.">http://www.popsci.com/files/imagecache/article_image_large/articles/deep%20brain%20stimulation.jpg.</a> </li>
+		</ol>
+	</div>
+
+	<div id="developments_content" style="display: none;">
 		<h2>Recent Developments</h2>
 
 		<h3>Genome Wide Association Studies</h3>
 
-		Genome wide association studies are being done to determine which genomic factors are statistically related to the disease. These studies look for genotypes that have a much higher frequency in people with Parkinson's disease than in people without Parkinson's disease. Such genotype factors are considered risk factors. This information is useful in understanding the mechanisms of the disease and may be useful in designing future clinical treatments.<br/>
+		<div style="text-align: center;">
+			<img src="images/gwas.gif"></img>
+			<br/>
+			Source<sup>1</sup>
+		</div>
 		<br/>
-		Other diseases, particularly monogenic disesases, have a very clear link between genotype and disease. Diseases like Parkinson's have a much more complex relationship. Even mutations that have a strong correlation with Parkinson's disease are often present in asymptomatic individuals.<br/>
+
+		Genome wide association studies are being done to determine which genomic factors are statistically related to the disease.
+		These studies look for genotypes that have a much higher frequency in people with Parkinson's disease than in people without Parkinson's disease. Such genotype factors are considered risk factors. This information is useful in understanding the mechanisms of the disease and may be useful in designing future clinical treatments.<br/>
+		<br/>
+		Other diseases, particularly monogenic disesases, have a very clear link between genotype and disease.
+		Diseases like Parkinson's Disease (PD) have a much more complex relationship.
+		Even mutations that have a strong correlation with Parkinson's disease are frequently present in individuals who do not develop PD<sup>3</sup>.<br/>
 		<br/>
 		One team has confirmed existing risk loci and identified two new risk loci<sup>4</sup>. Their results also provide evidence for the genetic heterogeneity of the disease.
 
+		<h3>Advances in Surgical Brain Stimulation</h3>
+
+		In the past, ablation of portions of the thalamus was used to treat cases of advanced PD.
+		Today, surgical brain stimulation techniques have almost completely replaced that process.
+		The brain stimulation techniques replicate the symptom improvement benefits of ablation with a more tunable and reversible process.<br/>
+		<br/>
+		Today, surgical brain stimulation of the subthalamic nucleus is commonly done. This is shown to reduce the same types of symptoms addressed by dopaminergic drugs such as L-DOPA.
+		Other symptoms of PD, such as midline symptoms, dysautonomic symptoms, and gait disturbance are not significantly improved.
+		Research is ongoing into stimulation of other areas of the brain, including cortical stimulation
+		of the motor areas, with the hopes of treating these other symptoms.<sup>5</sup>
+
 		<h3>Modeling Disease with cultured dopaminergic neurons from patient derived induced pluripotent stem cells</h3>
+
+		<div style="text-align: center;">
+			<img src="images/ipsc.jpg"></img>
+			<br/>
+			Source<sup>2</sup>
+		</div>
+		<br/>
 
 		A suspected primary cause of Parkinson's disease is death of dopaminergic neurons in the substantia nigra deep in the mesencephalon. This area of the brain is not surgically accessible in living patients, so it is difficult to study these cells or test treatments directly against this tissue. One of the promising areas of research involves recreating these dopaminergic neurons in vivo so that they can be studied, and new drugs and treatments and be directly tested. This can be done by taking fibroblast cells from Parkinson's patients, converting them to induced pluripotent stem cells (iPSCs) and then differentiating them into dopaminergic neurons.<br/>
 		<br/>
 		Unfortunately, creating iPSCs typically relies on viral transduction of four transcription factors. These viral factors provide the desired induced pluripotency but cause unwanted side effects. They cause an increased probability of tumors and they they cause a different gene expression profile from true embryonic stem cells. Recent research demonstrates improved techniques using Cre-recombinase excisable viruses for developing the iPSCs without the viral reprogramming factors<sup>6</sup>. This eliminates some of the increased tumor probability and provides a more true embryonic gene expression profile.
 
-		<h3>Advances in Surgical Brain Stimulation</h3>
-
-		In the past, ablation of portions of the thalamus was used to treat cases of advanced parkinson's disease. Today, surgical brain stimulation techniques have almost completely replaced that process. The brain stimulation techniques replicate the symptom improvement benefits of ablation with a more tunable and reversible process.
-
 		<h3>Other Promising Techniques<sup>5</sup></h3>
 
 		<ul>
-			<li>Surgical stimulation of cortical regions of the brain: Stimulation of the thalamus is a common treatment, however stimulation of other brain tissue has shown improvement in reducing other Parkinsons symptoms.</li>
 			<li>Neural Grafts: Grafting neurons into the brain. Additionally, stem cell derived neurons resolves immunological issues but potentially introduces oncological issues. This is a very promising technique but it is still in the early stages of patient trials.</li>
 			<li>Improved drugs: Currently, levodopa is the primary drug used to reduce most of the symptoms of Parkinson's Disease. Unfortunately, levodopa has the side effect of dyskinesia. New drugs are in development that reduce PD symptoms without the dyskinesia side effect.</li>
 			<li>Dopamine agonist infusion therapy: Administration of dopamine agonists via duodeno-gastrostomy has been shown to reduce PD symptoms without dysinesia side effects of levodopa.</li>
 		</ul>
 
-
-
-
-	</div>
-	<div id="references" style="display: none;">
 		<h2>References</h2>
 
 		<ol>
-			<li>Foundation PD. Statistics on Parkinson’s. <a href="http://www.pdf.org/en/parkinson_statistics">http://www.pdf.org/en/parkinson_statistics</a>.</li>
-			<li>WebMD. Parkinson’s Treatment and Care. <a href="http://www.webmd.com/parkinsons-disease/guide/parkinsons-treatment-care">http://www.webmd.com/parkinsons-disease/guide/parkinsons-treatment-care</a></li>
+			<li>Image for Genome Wide Association Studies. <a href="http://www.nature.com/nrg/journal/v6/n2/fig_tab/nrg1521_F2.html">http://www.nature.com/nrg/journal/v6/n2/fig_tab/nrg1521_F2.html</a></li>
+			<li>Image for induced pluripotent stem cells. <a href="http://ars.els-cdn.com/content/image/1-s2.0-S0169409X1100041X-gr1.jpg">http://ars.els-cdn.com/content/image/1-s2.0-S0169409X1100041X-gr1.jpg</a></li>
 			<li>Nalls M, Plagnol V, Hernandez D, et al. Imputation of sequence variants for identification of genetic
 				risks for Parkinson’s disease: a meta-analysis of genome-wide association studies. Lancet 2011;377:641.</li>
 			<li>Satake W, Nakabayashi Y, Mizuta I, et al. Genome-wide association study identifies common variants
@@ -106,7 +363,7 @@
 </div>
 
 <footer>
-	Class Project by Gary Ge, Kurt Ostfeld, Sonny Tran for BME365R at The University of Texas, Fall, 2012.
+	Class Project for BME365R at The University of Texas, Fall, 2012.
 </footer>
 
 </body>
